@@ -1,0 +1,15 @@
+<%- include('header') %>
+
+<table align="center">
+    <tr> <th>Id :</th><td><%= users._id %></td></tr>
+    <tr>  <th>Name :</th><td><%= users.name %></td></tr>
+    <tr>  <th>Email: </th><td><%= users.email %></td></tr>
+    <tr>  <th>Mobile</th><td><%= users.phone %></td></tr>
+
+
+</table>
+<div>
+    <% if (locals.message) { %>
+    <%= message %>
+    <% } %>
+    </div>

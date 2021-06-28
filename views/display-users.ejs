@@ -1,0 +1,25 @@
+<%- include('header') %>
+<table align="center" border="1">
+
+    <tr>
+
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+             <th>Action</th>
+
+    </tr>
+    <% for(i=0;i<users.length;i++) {%>
+        <tr>
+            <td><%= users[i].name %></td>
+            <td><%= users[i].email %></td>
+            <td><%= users[i].phone %></td>
+            <td>
+                <a href='/edit/<%= users[i]._id %>' >Edit</a>
+                <a href='/delete/<%= users[i]._id %>' >Delete</a>
+                <a href='/show/<%= users[i]._id %>' >Show</a>
+            </td>
+        </tr>
+    
+    <%} %>
+</table>
